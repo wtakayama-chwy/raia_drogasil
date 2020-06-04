@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import { mediaQuery } from './Helpers/mediaQuery'
-import { colors } from './Helpers/colors';
 import { backgroundColor, textColor, textShadow } from './Themes/theme';
 
 export default createGlobalStyle`
@@ -22,8 +21,3 @@ export default createGlobalStyle`
         }
     }
 `
-
-/*
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
-*/

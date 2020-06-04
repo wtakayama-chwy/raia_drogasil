@@ -8,7 +8,7 @@ export const backgroundColor = theme('mode', {
 });
 
 export const textColor = theme('mode', {
-    light: `${colors.black}`,
+    light: `${colors.gray}`,
     dark: `${colors.white}`
 });
 

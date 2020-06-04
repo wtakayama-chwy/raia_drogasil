@@ -6,8 +6,11 @@ const CardWrapper = styled.section`
     display: flex;
     justify-content: space-between;
     width: 95%;
-    height: 350px;
+    height: 350px;    
     padding: 2.5%;
+    @media ${mediaQuery.desktop} {
+        height: 23em;
+    }
     @media ${mediaQuery.tabletBig} {
         height: 425px;
         padding: 3.125%; /* 30px Ã· 960px */

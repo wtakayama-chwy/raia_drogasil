@@ -5,13 +5,15 @@ import { colors } from '../Helpers/colors';
 import { mediaQuery } from '../Helpers/mediaQuery';
 import CardWrapper from './CardWrapper';
 import Button from '../Button';
+import Popup from '../Popup/Popup';
 // Assets
 import imgDesktop from '../../assets/desktop-responsive-design.png';
 import imgTablet from '../../assets/tablets-responsive-design.png';
 import imgMobile from '../../assets/mobile-responsive-design.png';
-
+// Themes
 import { useTheme } from '../Themes/ThemeContext';
 import { invertColor } from '../Themes/theme'; 
+import ShowMore from '../ShowMore.js/ShowMore';
 
 
 const getStyle = type => {
@@ -122,9 +124,8 @@ const StyledCard = styled.div`
         position: relative;
         max-width: 100%;
         height: 112px;
-        /* height: 170px; */
         background-color: ${invertColor};
-        float: inherit;
+        /* float: inherit; */
         padding: 1.9444444444444445%;
         text-align: justify;
         font-weight: 300;
@@ -172,9 +173,7 @@ const Card = (props) => {
                     Quando pressionado o botão
                     <strong> Leia mais... </strong>
                     o restante da informação deverá aparecer em scroll down.
-                    <Button type="primary" size="sm">Leia mais...</Button>
-                    {/* <Button type="secondary" size="sm">Leia mais...</Button>
-                    <Button type="tertiary" size="sm">alterar tema</Button> */}
+                    <ShowMore />
                 </p>
             </StyledCard>
             <StyledCard type="tablet">
@@ -186,8 +185,8 @@ const Card = (props) => {
                     Quando pressionado o botão
                 <strong> Leia mais... </strong>
                 informação deverá aparecer completa em um popup na tela.
-                <Button type="secondary" size="sm">Leia mais...</Button>
-                </p>
+                <Popup />
+                </p>                              
             </StyledCard>
             <StyledCard type="mobile">
                 <figure>

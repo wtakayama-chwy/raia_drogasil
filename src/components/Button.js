@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+// Helpers
 import { colors } from './Helpers/colors';
 import { mediaQuery } from './Helpers/mediaQuery';
+// Themes
 import { buttonTextColor } from './Themes/theme';
 
 const getStyle = type => {
@@ -14,12 +16,21 @@ const getStyle = type => {
         case 'tertiary': return `
             background: ${colors.tertiary}
         `
+        case 'close': return`
+            background: ${colors.gray};
+            position: relative;
+            width: auto !important;
+        `
         default: return ``
     }    
 }
 
 const getSize = size => {
     switch (size) {
+        case 'mini': return `
+            padding: 0.2em 1rem;
+            font-size: 0.8em;
+        `
         case 'sm': return `
             height: 27px;
             padding: 0.8em 3.333333333333333%;
@@ -54,8 +65,7 @@ const Button = styled.button`
         letter-spacing: -0.1em; /* -2px Ã· 20px = -0.1em */
         height: 22px;
         margin-top: 20px;
-        position: absolute;
-        width: 50%;
+        /* width: 50%; */
         padding: 2px 3.333333333333333%; /* 4px Ã· 120px */
     }
 `;
