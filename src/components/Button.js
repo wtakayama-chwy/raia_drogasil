@@ -28,12 +28,12 @@ const getStyle = type => {
 const getSize = size => {
     switch (size) {
         case 'mini': return `
-            padding: 0.2em 1rem;
+            padding: 0.2rem 1rem;
             font-size: 0.8em;
         `
         case 'sm': return `
             height: 27px;
-            padding: 0.8em 3.333333333333333%;
+            padding: 0 0.8rem;
         `
         case 'md': return `
             padding: 0.6rem 1.6rem;
@@ -48,7 +48,8 @@ const getSize = size => {
 const Button = styled.button`
     position: absolute;
     display: flex;
-    align-items: center;
+    align-items: center;   
+    justify-content: center; 
     right: 0.3em;
     border: none;
     cursor: pointer;
@@ -60,12 +61,15 @@ const Button = styled.button`
     text-align: center;
     ${({ type }) => getStyle(type) };
     ${({ size }) => getSize(size) };
+    :focus {
+        outline: none;    
+    }
     @media ${mediaQuery.tablet} {
         font-size: 1.1111111111em; /* 20px Ã· 18px = 1.1111111111em */
         letter-spacing: -0.1em; /* -2px Ã· 20px = -0.1em */
         height: 22px;
         margin-top: 20px;
-        /* width: 50%; */
+        width: 52%;        
         padding: 2px 3.333333333333333%; /* 4px Ã· 120px */
     }
 `;
